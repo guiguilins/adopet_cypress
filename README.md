@@ -15,7 +15,7 @@ AdoPet is a web application designed to facilitate the adoption of pets. Users c
 To get started with the project, clone the repository and install the necessary dependencies:
 
 ```bash
-git clone https://github.com/your-username/adopet.git
+git clone [https://github.com/your-username/adopet.git](https://github.com/guiguilins/curso_cypress.git)
 cd adopet
 npm install
 ```

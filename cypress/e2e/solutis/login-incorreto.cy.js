@@ -4,7 +4,7 @@ describe('Pagina de login', () => {
     })
 
     it("Deve preencher os campos do login incorretamente para logar um novo usuário", () => {
-        cy.login('solutisErrado', '@Solutis123');
+        cy.loginGithub('solutisErrado', '@Solutis123');
         cy.url().should('include', '');
         cy.contains('Incorrect username or password.').should('be.visible');
     })

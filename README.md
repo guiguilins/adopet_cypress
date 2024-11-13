@@ -34,7 +34,7 @@ Para rodar este projeto, você precisará de:
 Siga os passos abaixo para configurar o ambiente de testes:
 
    ```bash
-   git clone https://github.com/seu_usuario/seu_repositorio.git
+   git clone https://github.com/guiguilins/curso_cypress.git
 ```
 
 ### Instale as dependências do projeto:

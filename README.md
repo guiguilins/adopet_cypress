@@ -16,13 +16,6 @@ AdoPet é uma aplicação web projetada para facilitar a adoção de animais de 
 
 Cada arquivo de teste cobre uma funcionalidade específica do sistema, garantindo que os componentes críticos funcionem conforme o esperado.
 
-## Pré-requisitos
-
-Para rodar este projeto, você precisará de:
-
-- **Node.js**: Certifique-se de que o Node.js está instalado na sua máquina.
-- **Cypress**: O Cypress deve estar instalado como uma dependência do projeto.
-
 ## Configuração de ambiente
 
 Siga os passos abaixo para configurar o ambiente de testes:

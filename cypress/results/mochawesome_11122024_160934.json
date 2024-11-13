@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-11-12T19:09:32.856Z",
+    "end": "2024-11-12T19:09:34.707Z",
+    "duration": 1851,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "21497a32-57cf-445a-9183-fb305e5e9f70",
+      "title": "",
+      "fullFile": "cypress\\e2e\\solutis\\login-incorreto.cy.js",
+      "file": "cypress\\e2e\\solutis\\login-incorreto.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "535a6f07-4e49-4fe5-884e-0c48833c0700",
+          "title": "Pagina de login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve preencher os campos do login incorretamente para logar um novo usuário",
+              "fullTitle": "Pagina de login Deve preencher os campos do login incorretamente para logar um novo usuário",
+              "timedOut": null,
+              "duration": 580,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('solutisErrado', '@Solutis123');\ncy.url().should('include', '');\ncy.contains('Incorrect username or password.').should('be.visible');",
+              "err": {
+                "message": "TypeError: cy.login is not a function",
+                "estack": "TypeError: cy.login is not a function\n    at Context.eval (webpack://cypress_project/./cypress/e2e/solutis/login-incorreto.cy.js:7:11)",
+                "diff": null
+              },
+              "uuid": "3d4eb7de-b59c-4e2a-a404-6e80c6ea87b3",
+              "parentUUID": "535a6f07-4e49-4fe5-884e-0c48833c0700",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3d4eb7de-b59c-4e2a-a404-6e80c6ea87b3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 580,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

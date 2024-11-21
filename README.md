@@ -51,7 +51,7 @@ A estrutura do projeto está organizada da seguinte forma:
 
 ## Documentação dos Testes
 Você pode encontrar a documentação dos testes no arquivo ```combined-report.html``` localizado em:
-```cypress/results/mochawesome-report/combined-report.html```
+```cypress/results/combined-report.html```
 
 ### Para execução dos testes via linha de comando
 ```npm run test-and-report```

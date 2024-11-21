@@ -42,7 +42,36 @@ Modo Headless: Execute todos os testes no modo headless (sem interface), ideal p
 ```
 npx cypress run
 ```
+### Instalar o Mochawesome
+Execute o comando abaixo para instalar o Mochawesome e as dependências necessárias:
 
+
+```
+npm install mochawesome mochawesome-merge mochawesome-report-generator --save-dev
+```
+**mochawesome**: Gera relatórios em HTML e JSON.
+**mochawesome-merge**: Mescla vários arquivos JSON em um único arquivo.
+**mochawesome-report-generator**: Gera o relatório HTML a partir dos arquivos JSON.
+
+
+### Configurar o Mochawesome no Cypress
+Configurar o Cypress para usar o Mochawesome
+Abra o arquivo cypress.config.js e adicione as seguintes configurações para gerar os relatórios no formato Mochawesome:
+```
+{
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": false,
+    "html": true,
+    "json": true
+  }
+}
+```
+**reportDir**: Diretório onde os arquivos de relatório JSON serão salvos.
+**overwrite**: Define se os relatórios existentes serão sobrescritos. Defina como false para não sobrescrever os relatórios anteriores.
+**html**: Gera o relatório em formato HTML.
+**json**: Gera o relatório em formato JSON (necessário para mesclar relatórios).
 
 ## Estrutura do Projeto
 

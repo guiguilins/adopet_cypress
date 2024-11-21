@@ -53,7 +53,9 @@ Execute o comando abaixo para instalar o Mochawesome e as dependências necessá
 npm install mochawesome mochawesome-merge mochawesome-report-generator --save-dev
 ```
 **mochawesome**: Gera relatórios em HTML e JSON.
+
 **mochawesome-merge**: Mescla vários arquivos JSON em um único arquivo.
+
 **mochawesome-report-generator**: Gera o relatório HTML a partir dos arquivos JSON.
 
 
@@ -71,10 +73,10 @@ Abra o arquivo cypress.config.js e adicione as seguintes configurações para ge
   }
 }
 ```
-**reportDir**: Diretório onde os arquivos de relatório JSON serão salvos.
-**overwrite**: Define se os relatórios existentes serão sobrescritos. Defina como false para não sobrescrever os relatórios anteriores.
-**html**: Gera o relatório em formato HTML.
-**json**: Gera o relatório em formato JSON (necessário para mesclar relatórios).
+- **reportDir**: Diretório onde os arquivos de relatório JSON serão salvos.
+- **overwrite**: Define se os relatórios existentes serão sobrescritos. Defina como false para não sobrescrever os relatórios anteriores.
+- **html**: Gera o relatório em formato HTML.
+- **json**: Gera o relatório em formato JSON (necessário para mesclar relatórios).
 
 ## Estrutura do Projeto
 

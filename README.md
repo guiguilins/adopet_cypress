@@ -11,7 +11,7 @@ AdoPet é uma aplicação web projetada para facilitar a adoção de animais de 
 
 - **Node.js**: Certifique-se de ter o Node.js instalado em sua máquina.
 - **Cypress**: O Cypress deve estar instalado como dependência do projeto.
-
+- **Mochawesome**: Deve estar instalado para gerar relatórios de testes.
 ## Instalação
 
 Cada arquivo de teste cobre uma funcionalidade específica do sistema, garantindo que os componentes críticos funcionem conforme o esperado.
@@ -48,3 +48,10 @@ npx cypress run
 
 A estrutura do projeto está organizada da seguinte forma:
 ![Screenshot_162](https://github.com/user-attachments/assets/574896b9-4f67-4864-9f17-e4d8d5b8c792)
+
+## Documentação dos Testes
+Você pode encontrar a documentação dos testes no arquivo ```combined-report.html``` localizado em:
+```cypress/results/mochawesome-report/combined-report.html```
+
+### Para execução dos testes via linha de comando
+```npm run test-and-report```

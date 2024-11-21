@@ -15,9 +15,10 @@ Cypress.Commands.add('cadastrarAdopet', (nome, email, senha) => {
 })
 
 Cypress.Commands.add('loginAdopet', (email, password) => {
-    cy.get('[data-test="input-loginEmail"]').type(email);
-    cy.get('[data-test="input-loginPassword"]').type(password);
-    cy.get('[data-test="submit-button"]').click();
+       cy.get('[data-test="input-loginEmail"]').type(email);
+       cy.get('[data-test="input-loginPassword"]').type(password);
+       cy.get('[data-test="submit-button"]').click();
+
 })
 
 

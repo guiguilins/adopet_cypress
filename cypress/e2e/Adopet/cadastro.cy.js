@@ -1,6 +1,6 @@
 import { usuarios } from '../../fixtures/usuarios';
 
-describe('Pagina de cadastro correto', () => {
+describe('Pagina de cadastro ', () => {
   beforeEach(() => {
     cy.visit('https://adopet-frontend-cypress.vercel.app');
     cy.contains('a', 'Cadastrar').click();
@@ -8,12 +8,13 @@ describe('Pagina de cadastro correto', () => {
       statusCode:400, }).as('stubPost')
   })
 
+  context('Pagina de cadastro com sucesso', () => {
   it('Deve preencher os campos do formulário corretamente para cadastrar um novo usuário', () => {
     cy.cadastrarAdopet('Dudu Lins', 'dudu@hotmail.com', '@Dudu12342');
   })
 })
 
-describe('Pagina de cadastro incorreto', () => {
+context('Pagina de cadastro incorreto', () => {
   beforeEach(() => {
     cy.visit('https://adopet-frontend-cypress.vercel.app');
     cy.get('[data-test="register-button"]').click();
@@ -27,14 +28,11 @@ describe('Pagina de cadastro incorreto', () => {
   })
 })
 
-describe('Pagina de cadastro com cadastros de usuarios em massa', () => {
-  beforeEach(() => {
-    cy.visit('https://adopet-frontend-cypress.vercel.app/');
-    cy.get('[data-test="register-button"]').click();
-  })
+context('Pagina de cadastro com cadastros de usuarios em massa', () => {
   usuarios.forEach(usuarios => {
     it('Deve preencher os campos do formulário corretamente para cadastrar um novo usuário', () => {
       cy.cadastrarAdopet(usuarios.name, usuarios.email, usuarios.password);
+      })
     })
   })
 })

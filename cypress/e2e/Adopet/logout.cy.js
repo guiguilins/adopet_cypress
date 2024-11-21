@@ -9,6 +9,6 @@ describe('Pagina de mensagem', () => {
 
     it("Deve fazer logout de acordo com o usuario logado", () => {
         cy.get('.header__user').click();
-        cy.get('#headlessui-menu-items-\:r3\: > [data-test="submit-button"]').click();
+        cy.get('[data-test="submit-button"]').eq(0).click();
     })
 })

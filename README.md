@@ -1,4 +1,7 @@
 
+
+![Screenshot_175](https://github.com/user-attachments/assets/ae5cbfc9-6a23-487d-9dc1-a1748bee0a9f)
+
 # Projeto de Testes Automatizados com Cypress
 
 Este repositório contém uma suíte de testes automatizados utilizando Cypress, desenvolvida para garantir a qualidade e funcionamento das funcionalidades principais do sistema. Abaixo, você encontrará a estrutura do projeto, instruções de instalação e execução, além de descrições dos testes presentes.
@@ -42,7 +45,38 @@ Modo Headless: Execute todos os testes no modo headless (sem interface), ideal p
 ```
 npx cypress run
 ```
+### Instalar o Mochawesome
+Execute o comando abaixo para instalar o Mochawesome e as dependências necessárias:
 
+
+```
+npm install mochawesome mochawesome-merge mochawesome-report-generator --save-dev
+```
+**mochawesome**: Gera relatórios em HTML e JSON.
+
+**mochawesome-merge**: Mescla vários arquivos JSON em um único arquivo.
+
+**mochawesome-report-generator**: Gera o relatório HTML a partir dos arquivos JSON.
+
+
+### Configurar o Mochawesome no Cypress
+Configurar o Cypress para usar o Mochawesome
+Abra o arquivo cypress.config.js e adicione as seguintes configurações para gerar os relatórios no formato Mochawesome:
+```
+{
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": false,
+    "html": true,
+    "json": true
+  }
+}
+```
+- **reportDir**: Diretório onde os arquivos de relatório JSON serão salvos.
+- **overwrite**: Define se os relatórios existentes serão sobrescritos. Defina como false para não sobrescrever os relatórios anteriores.
+- **html**: Gera o relatório em formato HTML.
+- **json**: Gera o relatório em formato JSON (necessário para mesclar relatórios).
 
 ## Estrutura do Projeto
 
@@ -51,7 +85,7 @@ A estrutura do projeto está organizada da seguinte forma:
 
 ## Documentação dos Testes
 Você pode encontrar a documentação dos testes no arquivo ```combined-report.html``` localizado em:
-```cypress/results/mochawesome-report/combined-report.html```
+```cypress/results/combined-report.html```
 
 ### Para execução dos testes via linha de comando
 ```npm run test-and-report```

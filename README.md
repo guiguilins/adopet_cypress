@@ -1,4 +1,7 @@
 
+
+![Screenshot_175](https://github.com/user-attachments/assets/ae5cbfc9-6a23-487d-9dc1-a1748bee0a9f)
+
 # Projeto de Testes Automatizados com Cypress
 
 Este repositório contém uma suíte de testes automatizados utilizando Cypress, desenvolvida para garantir a qualidade e funcionamento das funcionalidades principais do sistema. Abaixo, você encontrará a estrutura do projeto, instruções de instalação e execução, além de descrições dos testes presentes.
